@@ -63,7 +63,7 @@ y = Variable()
 # DCP problems.
 prob1 = Problem(Minimize(square(x - y)), [x + y >= 0])
 prob2 = Problem(Maximize(sqrt(x - y)), [2*x - 3 == y,
-                                        square(x) <- 2])
+                                        square(x) <= 2])
 
 print "prob1 is DCP:", prob1.is_dcp()
 print "prob2 is DCP:", prob2.is_dcp()
